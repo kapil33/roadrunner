@@ -3,9 +3,10 @@ from django.conf.urls import include
 from . import views
 import superuser
 urlpatterns = [
-        url(r'^$', views.index, name='index'),
+        #url(r'^$', views.index, name='index'),
         url(r'^request/stops/', views.send_stops, name='send_stops'),
         url(r'^test/', views.test, name='test'),
+        url(r'^', include('superuser.urls')),
         url(r'signup/', include('superuser.urls')),
         url(r'^signup-form/', views.user_signup, name='signup'),
         url(r'^login/', views.login_form, name='login'),
