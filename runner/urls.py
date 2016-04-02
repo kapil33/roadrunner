@@ -7,6 +7,7 @@ urlpatterns = [
         url(r'^request/stops/', views.send_stops, name='send_stops'),
         url(r'^test/', views.test, name='test'),
         url(r'^', include('superuser.urls')),
+        url(r'^change-password', views.change_password, name='change_password'),
         url(r'signup/', include('superuser.urls')),
         url(r'^signup-form/', views.user_signup, name='signup'),
         url(r'^login-naive/', views.login_form, name='login'),
